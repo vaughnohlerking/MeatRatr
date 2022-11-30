@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 
 DRIVER_PATH = '/usr/local/bin/chromedriver'
 
-SAVE_FOLDER = 'quality_steak/'
+SAVE_FOLDER = '.././data/quality_steak/'
 
 GOOGLE_IMAGES = 'https://www.google.com/search?q=quality+raw+steak&tbm=isch&ved=2ahUKEwjjz9utu9T7AhWGLt8KHXtBBrkQ2-cCegQIABAA&oq=quality+raw+steak&gs_lcp=CgNpbWcQAzoFCAAQgAQ6BggAEAcQHjoGCAAQCBAeOggIABAIEAcQHlDgEVjBFmDzG2gAcAB4AIABRIgBsAKSAQE1mAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=84qGY6OKEobd_Ab7gpnICw&bih=754&biw=1536&rlz=1C1CHBF_enUS937US937'
 
