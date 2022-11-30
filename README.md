@@ -2,15 +2,15 @@
 
 Machine learning algorithm for classifying the quality of meat based on marbling, freshness, etc.
 
+main algorithm is using @otenim 's implementation of Xception CNN. Github repo https://github.com/otenim/Xception-with-Your-Own-Dataset
 required libraries setup:
 
-# Requires the latest pip
+# Requires the latest pip and a ton of other libraries i'm not adding right now
 
 pip install --upgrade pip
 
-# Current stable release for CPU and GPU
-
 pip install tensorflow
+pip install keras
 
 # to train data
 
