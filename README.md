@@ -22,4 +22,4 @@ python3 src/otXception/fine_tune.py data/ classes.txt src/otXception/output
 
 $ python inference.py result/model_fine_final.h5 classes.txt images/airplane.jpg
 or
-python3 src/otXception/inference.py src/otXception/output/model_fine_final.h5 testData/mid01.jpeg
+python3 src/otXception/inference.py src/otXception/output/model_fine_final.h5 classes.txt testData/wagtest.png
