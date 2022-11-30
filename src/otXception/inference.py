@@ -4,6 +4,7 @@ from keras.applications.xception import preprocess_input
 import keras.utils as image
 # from keras.preprocessing import image
 from keras.models import load_model
+from PIL import Image
 
 parser = argparse.ArgumentParser()
 parser.add_argument('model')
