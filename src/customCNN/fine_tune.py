@@ -6,8 +6,12 @@ import imghdr
 import pickle as pkl
 import numpy as np
 import matplotlib.pyplot as plt
+from keras.layers import Input, Lambda, Dense, Flatten,Conv2D
+from keras.models import Sequential
+from keras.layers import MaxPooling2D
 from keras.applications.xception import Xception, preprocess_input
 from keras.applications.inception_v3 import InceptionV3
+from keras.applications.resnet_v2 import ResNet50V2
 from keras.optimizers import Adam
 import keras.utils as image
 # from keras.preprocessing import image
@@ -35,7 +39,7 @@ parser.add_argument('--split', type=float, default=0.8)
 
 
 def generate_from_paths_and_labels(
-        input_paths, labels, batch_size, input_size=(299, 299)):
+        input_paths, labels, batch_size, input_size=(224, 224)):
     num_samples = len(input_paths)
     while 1:
         perm = np.random.permutation(num_samples)
@@ -114,10 +118,13 @@ def main(args):
     # instantiate pre-trained Xception model
     # the default input shape is (299, 299, 3)
     # NOTE: the top classifier is not included
-    base_model = Xception(
-        include_top=False,
-        weights='imagenet',
-        input_shape=(299, 299, 3))
+    base_model = Sequential()
+
+    base_model.add(Conv2D(filters=16,kernel_size=2,padding="same",activation="relu",input_shape=(224,224,3)))
+    base_model.add(MaxPooling2D(pool_size=2))
+    base_model.add(Conv2D(filters=32,kernel_size=2,padding="same",activation ="relu"))
+    base_model.add(MaxPooling2D(pool_size=2))
+    base_model.add(Conv2D(filters=64,kernel_size=2,padding="same",activation="relu"))
 
     # create a custom top classifier
     x = base_model.output

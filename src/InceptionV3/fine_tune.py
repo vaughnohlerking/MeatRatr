@@ -8,6 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from keras.applications.xception import Xception, preprocess_input
 from keras.applications.inception_v3 import InceptionV3
+from keras.applications.vgg16 import VGG16
 from keras.optimizers import Adam
 import keras.utils as image
 # from keras.preprocessing import image
@@ -114,7 +115,7 @@ def main(args):
     # instantiate pre-trained Xception model
     # the default input shape is (299, 299, 3)
     # NOTE: the top classifier is not included
-    base_model = Xception(
+    base_model = InceptionV3(
         include_top=False,
         weights='imagenet',
         input_shape=(299, 299, 3))

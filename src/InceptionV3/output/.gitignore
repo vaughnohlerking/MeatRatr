@@ -1,0 +1,6 @@
+*
+
+!.gitignore
+!accuracy.png
+!loss.png
+!plot.dump
