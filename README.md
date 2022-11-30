@@ -16,10 +16,10 @@ pip install keras
 
 $ python fine_tune.py root/ classes.txt <result_root> [epochs_pre] [epochs_fine] [batch_size_pre] [batch_size_fine] [lr_pre] [lr_fine] [snapshot_period_pre] [snapshot_period_fine]
 or
-python3 src/otXception/fine_tune.py data/ classes.txt src/otXception/output
+python3 src/{ model folder name }/fine_tune.py data/ classes.txt src/{ model folder name }/output
 
 # to test data
 
 $ python inference.py result/model_fine_final.h5 classes.txt images/airplane.jpg
 or
-python3 src/otXception/inference.py src/otXception/output/model_fine_final.h5 classes.txt testData/wagtest.png
+python3 src/{ model folder name }/inference.py src/{ model folder name }/output/model_fine_final.h5 classes.txt testData/wagtest.png
