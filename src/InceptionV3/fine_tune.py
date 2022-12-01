@@ -110,7 +110,7 @@ def main(args):
         os.makedirs(args.result_root)
 
     # ====================================================
-    # Build a custom Xception
+    # Build a custom InceptionV3
     # ====================================================
     # instantiate pre-trained Xception model
     # the default input shape is (299, 299, 3)

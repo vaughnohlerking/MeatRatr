@@ -110,10 +110,10 @@ def main(args):
         os.makedirs(args.result_root)
 
     # ====================================================
-    # Build a custom Xception
+    # Build a custom ResNet50V2
     # ====================================================
     # instantiate pre-trained Xception model
-    # the default input shape is (299, 299, 3)
+    # the default input shape is (224, 224, 3)
     # NOTE: the top classifier is not included
     base_model = ResNet50V2(
         include_top=False,
